@@ -4,9 +4,9 @@ const router = require("express").Router();
 
 const {
     readDbFile,
-    createNewNote,
+    createNote,
     readAppend,
-} = require("../lib/notes");
+} = require("../notes/index");
 
 router.post("/notes", (request, response) => {
     const newNote = {
