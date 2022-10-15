@@ -8,7 +8,7 @@ const {
     readAppend,
 } = require("../notes/index");
 
-router.post("/notes", (request, response) => {
+router.post("../notes/index", (request, response) => {
     const newNote = {
       text: request.body.text,
       title: request.body.title,
@@ -19,7 +19,7 @@ router.post("/notes", (request, response) => {
   });
   
 
-router.get("/notes", (request, response) => {
+router.get("../notes/index", (request, response) => {
     readDbFile("./db/db.json").then((data) => response.json(JSON.parse(data)));
 });
 

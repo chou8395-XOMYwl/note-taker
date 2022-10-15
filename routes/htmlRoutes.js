@@ -5,7 +5,7 @@ router.get("*", (request, response) => {
     response.sendFile(path.join(__dirname, "../../public/index.html"));
 });
 
-router.get("/notes", (request, response) => {
+router.get("../notes/index", (request, response) => {
     response.sendFile(path.join(__dirname, "../../public/notes.html"));
 });
 
